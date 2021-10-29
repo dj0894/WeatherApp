@@ -18,6 +18,8 @@
 		CFFCD28C272BD18C00C48C93 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0AB3A272BA3BD0037FBCF /* SearchCityViewController.swift */; };
 		CFFCD28E272BD1DC00C48C93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFCD28D272BD1DC00C48C93 /* Constants.swift */; };
 		CFFCD290272BD48E00C48C93 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFCD28F272BD48E00C48C93 /* CityInfo.swift */; };
+		CFFCD297272CA78C00C48C93 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFCD295272CA78C00C48C93 /* customTableViewCell.swift */; };
+		CFFCD298272CA78C00C48C93 /* customTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFCD296272CA78C00C48C93 /* customTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CFA0AB3A272BA3BD0037FBCF /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 		CFFCD28D272BD1DC00C48C93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFFCD28F272BD48E00C48C93 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		CFFCD295272CA78C00C48C93 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+		CFFCD296272CA78C00C48C93 /* customTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				CFA0AB27272B978F0037FBCF /* Main.storyboard */,
+				CFFCD295272CA78C00C48C93 /* customTableViewCell.swift */,
+				CFFCD296272CA78C00C48C93 /* customTableViewCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -189,6 +195,7 @@
 			files = (
 				CFFCD28B272BD11400C48C93 /* Main.storyboard in Resources */,
 				CFA0AB2E272B97940037FBCF /* LaunchScreen.storyboard in Resources */,
+				CFFCD298272CA78C00C48C93 /* customTableViewCell.xib in Resources */,
 				CFA0AB2B272B97940037FBCF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +251,7 @@
 			files = (
 				CFFCD285272BC57500C48C93 /* ViewController.swift in Sources */,
 				CFFCD28C272BD18C00C48C93 /* SearchCityViewController.swift in Sources */,
+				CFFCD297272CA78C00C48C93 /* customTableViewCell.swift in Sources */,
 				CFA0AB22272B978F0037FBCF /* AppDelegate.swift in Sources */,
 				CFA0AB39272BA11B0037FBCF /* CurrentWeather.swift in Sources */,
 				CFFCD290272BD48E00C48C93 /* CityInfo.swift in Sources */,

@@ -15,5 +15,6 @@ class CurrentWeather{
     var isDayTime:Bool=true
     var celcius: Int=Int.min
     var fahreneit: Int=Int.min
+    var weatherIcon:Int=1
     
 }

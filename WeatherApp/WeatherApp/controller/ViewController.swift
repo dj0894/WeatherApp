@@ -16,10 +16,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tblView: UITableView!
     
+    let arr1=["02","02","03"]
+    
     let arr = ["Seattle WA, USA 54 °F", "Delhi DL, India, 75°F"]
     var arrCityInfo: [CityInfo] = [CityInfo]()
     var arrCurrentWeather : [CurrentWeather] = [CurrentWeather]()
     var tableCellInfo: [String] = []
+    var imageIcons: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,17 +39,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+    //   let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell=Bundle.main.loadNibNamed("customTableViewCell", owner:self, options:nil)?.first as! customTableViewCell
+       
         
-        let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let len=arrCurrentWeather.count
+        
         tableCellInfo = []
+        imageIcons=[]
         for i in 0...(len-1){
             let cityWeather=arrCurrentWeather[i];
+            print(cityWeather)
             print(type(of: cityWeather))
             var tableCellData=("\(cityWeather.cityInfoName) | \(cityWeather.weatherText) | \(cityWeather.celcius)°C |")
+
             tableCellInfo.append(tableCellData)
+            imageIcons.append("\(cityWeather.weatherIcon)")
         }
-        cell.textLabel?.text=tableCellInfo[indexPath.row]
+        print(tableCellInfo)
+        print(imageIcons)
+//        cell.textLabel?.text=tableCellInfo[indexPath.row]
+        cell.imageLabel.text=tableCellInfo[indexPath.row]
+        cell.imgView?.image=UIImage(named: imageIcons[indexPath.row])
+        
         return cell
     }
     
@@ -89,13 +105,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cityName=city["localizedName"]!
             let url=currentConditionURL+key as! String+"?apikey="+apiKey
             
+            print(url)
             AF.request(url).responseJSON { response in
                 if response.error != nil {
                     print(response.error?.localizedDescription)
                     return
                 }
                 let cityCurrentCondition=JSON(response.data!).array
-                
+                print(response.data!)
                 if(cityCurrentCondition==nil){
                     print("cityCurrentCondition is nil")
                     return
@@ -116,6 +133,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     currentWeather.isDayTime=weather["IsDayTime"].boolValue
                     currentWeather.celcius=weather["Temperature"]["Metric"]["Value"].intValue
                     currentWeather.fahreneit=weather["Temperature"]["Imperial"]["Value"].intValue
+                    currentWeather.weatherIcon=weather["WeatherIcon"].intValue
                     self.arrCurrentWeather.append(currentWeather)
                 }
                 //reload tableView data
