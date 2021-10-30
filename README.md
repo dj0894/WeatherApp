@@ -21,3 +21,9 @@ It uses following Accuweather API's
 
 ### Search Screen 
 <img src="./screenshots/searchscreen.png" width="350" height="600">
+
+# Demo
+
+For full demo [click here](https://drive.google.com/file/d/15aBchuaQSlTCcAj32YgNzAdaxcDPtmlX/view?usp=sharing)
+
+<img src="./gif/weatherAppDemo.gif" width="350" height="600">
