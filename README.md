@@ -16,12 +16,8 @@ It uses following Accuweather API's
     - Realm
     
 # Screenshots
+### Home Screen
+<img src="./screenshots/homescreen.png" width="350" height="600">
 
-## Home Screen
-
-![Home Screen](screenshots/homescreen.png)
-
-
-## Search Screen 
-![Search Screen](screenshots/searchscreen.png)
-
+### Search Screen 
+<img src="./screenshots/searchscreen.png" width="350" height="600">
